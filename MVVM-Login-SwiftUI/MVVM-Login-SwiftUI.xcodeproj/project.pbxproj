@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A3DD7EC276FBE1F00F2246F /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3DD7EB276FBE1F00F2246F /* Authentication.swift */; };
+		4A3DD7F2276FBF8B00F2246F /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3DD7F1276FBF8B00F2246F /* NetworkServices.swift */; };
+		4AA37F72276FAF30001BD33E /* MVVM_Login_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA37F71276FAF30001BD33E /* MVVM_Login_SwiftUIApp.swift */; };
+		4AA37F74276FAF30001BD33E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA37F73276FAF30001BD33E /* ContentView.swift */; };
+		4AA37F76276FAF32001BD33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA37F75276FAF32001BD33E /* Assets.xcassets */; };
+		4AA37F79276FAF32001BD33E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA37F78276FAF32001BD33E /* Preview Assets.xcassets */; };
+		4AA37F84276FAF32001BD33E /* MVVM_Login_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA37F83276FAF32001BD33E /* MVVM_Login_SwiftUITests.swift */; };
+		4AA37F8F276FAF32001BD33E /* MVVM_Login_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA37F8E276FAF32001BD33E /* MVVM_Login_SwiftUIUITests.swift */; };
+		4AA37FA0276FAFF9001BD33E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA37F9F276FAFF9001BD33E /* LoginView.swift */; };
+		4AA37FA7276FB079001BD33E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA37FA6276FB079001BD33E /* LoginViewModel.swift */; };
+		4AA37FB1276FB11D001BD33E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA37FB0276FB11D001BD33E /* Credentials.swift */; };
+		4AA37FB6276FB15D001BD33E /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA37FB5276FB15D001BD33E /* UIApplicationExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4AA37F80276FAF32001BD33E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AA37F66276FAF30001BD33E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AA37F6D276FAF30001BD33E;
+			remoteInfo = "MVVM-Login-SwiftUI";
+		};
+		4AA37F8B276FAF32001BD33E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AA37F66276FAF30001BD33E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AA37F6D276FAF30001BD33E;
+			remoteInfo = "MVVM-Login-SwiftUI";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A3DD7EB276FBE1F00F2246F /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		4A3DD7F1276FBF8B00F2246F /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		4AA37F6E276FAF30001BD33E /* MVVM-Login-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-Login-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AA37F71276FAF30001BD33E /* MVVM_Login_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Login_SwiftUIApp.swift; sourceTree = "<group>"; };
+		4AA37F73276FAF30001BD33E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4AA37F75276FAF32001BD33E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4AA37F78276FAF32001BD33E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4AA37F7A276FAF32001BD33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AA37F7F276FAF32001BD33E /* MVVM-Login-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-Login-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AA37F83276FAF32001BD33E /* MVVM_Login_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Login_SwiftUITests.swift; sourceTree = "<group>"; };
+		4AA37F85276FAF32001BD33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AA37F8A276FAF32001BD33E /* MVVM-Login-SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-Login-SwiftUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AA37F8E276FAF32001BD33E /* MVVM_Login_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_Login_SwiftUIUITests.swift; sourceTree = "<group>"; };
+		4AA37F90276FAF32001BD33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AA37F9F276FAFF9001BD33E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4AA37FA6276FB079001BD33E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4AA37FB0276FB11D001BD33E /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		4AA37FB5276FB15D001BD33E /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AA37F6B276FAF30001BD33E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AA37F7C276FAF32001BD33E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AA37F87276FAF32001BD33E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4AA37F65276FAF30001BD33E = {
+			isa = PBXGroup;
+			children = (
+				4AA37F70276FAF30001BD33E /* MVVM-Login-SwiftUI */,
+				4AA37F82276FAF32001BD33E /* MVVM-Login-SwiftUITests */,
+				4AA37F8D276FAF32001BD33E /* MVVM-Login-SwiftUIUITests */,
+				4AA37F6F276FAF30001BD33E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4AA37F6F276FAF30001BD33E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AA37F6E276FAF30001BD33E /* MVVM-Login-SwiftUI.app */,
+				4AA37F7F276FAF32001BD33E /* MVVM-Login-SwiftUITests.xctest */,
+				4AA37F8A276FAF32001BD33E /* MVVM-Login-SwiftUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4AA37F70276FAF30001BD33E /* MVVM-Login-SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				4AA37FC1276FB492001BD33E /* APIServices */,
+				4AA37FBA276FB162001BD33E /* Extesions */,
+				4AA37FAF276FB0F2001BD33E /* Models */,
+				4AA37FA5276FB060001BD33E /* ViewModels */,
+				4AA37FA4276FB053001BD33E /* Views */,
+				4AA37F71276FAF30001BD33E /* MVVM_Login_SwiftUIApp.swift */,
+				4AA37F75276FAF32001BD33E /* Assets.xcassets */,
+				4AA37F7A276FAF32001BD33E /* Info.plist */,
+				4AA37F77276FAF32001BD33E /* Preview Content */,
+			);
+			path = "MVVM-Login-SwiftUI";
+			sourceTree = "<group>";
+		};
+		4AA37F77276FAF32001BD33E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4AA37F78276FAF32001BD33E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4AA37F82276FAF32001BD33E /* MVVM-Login-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4AA37F83276FAF32001BD33E /* MVVM_Login_SwiftUITests.swift */,
+				4AA37F85276FAF32001BD33E /* Info.plist */,
+			);
+			path = "MVVM-Login-SwiftUITests";
+			sourceTree = "<group>";
+		};
+		4AA37F8D276FAF32001BD33E /* MVVM-Login-SwiftUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4AA37F8E276FAF32001BD33E /* MVVM_Login_SwiftUIUITests.swift */,
+				4AA37F90276FAF32001BD33E /* Info.plist */,
+			);
+			path = "MVVM-Login-SwiftUIUITests";
+			sourceTree = "<group>";
+		};
+		4AA37FA4276FB053001BD33E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AA37F73276FAF30001BD33E /* ContentView.swift */,
+				4AA37F9F276FAFF9001BD33E /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4AA37FA5276FB060001BD33E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4AA37FA6276FB079001BD33E /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4AA37FAF276FB0F2001BD33E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4AA37FB0276FB11D001BD33E /* Credentials.swift */,
+				4A3DD7EB276FBE1F00F2246F /* Authentication.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4AA37FBA276FB162001BD33E /* Extesions */ = {
+			isa = PBXGroup;
+			children = (
+				4AA37FB5276FB15D001BD33E /* UIApplicationExtension.swift */,
+			);
+			path = Extesions;
+			sourceTree = "<group>";
+		};
+		4AA37FC1276FB492001BD33E /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				4A3DD7F1276FBF8B00F2246F /* NetworkServices.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4AA37F6D276FAF30001BD33E /* MVVM-Login-SwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AA37F93276FAF32001BD33E /* Build configuration list for PBXNativeTarget "MVVM-Login-SwiftUI" */;
+			buildPhases = (
+				4AA37F6A276FAF30001BD33E /* Sources */,
+				4AA37F6B276FAF30001BD33E /* Frameworks */,
+				4AA37F6C276FAF30001BD33E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MVVM-Login-SwiftUI";
+			productName = "MVVM-Login-SwiftUI";
+			productReference = 4AA37F6E276FAF30001BD33E /* MVVM-Login-SwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4AA37F7E276FAF32001BD33E /* MVVM-Login-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AA37F96276FAF32001BD33E /* Build configuration list for PBXNativeTarget "MVVM-Login-SwiftUITests" */;
+			buildPhases = (
+				4AA37F7B276FAF32001BD33E /* Sources */,
+				4AA37F7C276FAF32001BD33E /* Frameworks */,
+				4AA37F7D276FAF32001BD33E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4AA37F81276FAF32001BD33E /* PBXTargetDependency */,
+			);
+			name = "MVVM-Login-SwiftUITests";
+			productName = "MVVM-Login-SwiftUITests";
+			productReference = 4AA37F7F276FAF32001BD33E /* MVVM-Login-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4AA37F89276FAF32001BD33E /* MVVM-Login-SwiftUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AA37F99276FAF32001BD33E /* Build configuration list for PBXNativeTarget "MVVM-Login-SwiftUIUITests" */;
+			buildPhases = (
+				4AA37F86276FAF32001BD33E /* Sources */,
+				4AA37F87276FAF32001BD33E /* Frameworks */,
+				4AA37F88276FAF32001BD33E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4AA37F8C276FAF32001BD33E /* PBXTargetDependency */,
+			);
+			name = "MVVM-Login-SwiftUIUITests";
+			productName = "MVVM-Login-SwiftUIUITests";
+			productReference = 4AA37F8A276FAF32001BD33E /* MVVM-Login-SwiftUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4AA37F66276FAF30001BD33E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					4AA37F6D276FAF30001BD33E = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					4AA37F7E276FAF32001BD33E = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4AA37F6D276FAF30001BD33E;
+					};
+					4AA37F89276FAF32001BD33E = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4AA37F6D276FAF30001BD33E;
+					};
+				};
+			};
+			buildConfigurationList = 4AA37F69276FAF30001BD33E /* Build configuration list for PBXProject "MVVM-Login-SwiftUI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4AA37F65276FAF30001BD33E;
+			productRefGroup = 4AA37F6F276FAF30001BD33E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4AA37F6D276FAF30001BD33E /* MVVM-Login-SwiftUI */,
+				4AA37F7E276FAF32001BD33E /* MVVM-Login-SwiftUITests */,
+				4AA37F89276FAF32001BD33E /* MVVM-Login-SwiftUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4AA37F6C276FAF30001BD33E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AA37F79276FAF32001BD33E /* Preview Assets.xcassets in Resources */,
+				4AA37F76276FAF32001BD33E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AA37F7D276FAF32001BD33E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AA37F88276FAF32001BD33E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4AA37F6A276FAF30001BD33E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A3DD7EC276FBE1F00F2246F /* Authentication.swift in Sources */,
+				4AA37FB6276FB15D001BD33E /* UIApplicationExtension.swift in Sources */,
+				4AA37FA7276FB079001BD33E /* LoginViewModel.swift in Sources */,
+				4AA37FA0276FAFF9001BD33E /* LoginView.swift in Sources */,
+				4AA37FB1276FB11D001BD33E /* Credentials.swift in Sources */,
+				4AA37F74276FAF30001BD33E /* ContentView.swift in Sources */,
+				4A3DD7F2276FBF8B00F2246F /* NetworkServices.swift in Sources */,
+				4AA37F72276FAF30001BD33E /* MVVM_Login_SwiftUIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AA37F7B276FAF32001BD33E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AA37F84276FAF32001BD33E /* MVVM_Login_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AA37F86276FAF32001BD33E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AA37F8F276FAF32001BD33E /* MVVM_Login_SwiftUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4AA37F81276FAF32001BD33E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AA37F6D276FAF30001BD33E /* MVVM-Login-SwiftUI */;
+			targetProxy = 4AA37F80276FAF32001BD33E /* PBXContainerItemProxy */;
+		};
+		4AA37F8C276FAF32001BD33E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AA37F6D276FAF30001BD33E /* MVVM-Login-SwiftUI */;
+			targetProxy = 4AA37F8B276FAF32001BD33E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4AA37F91276FAF32001BD33E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4AA37F92276FAF32001BD33E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4AA37F94276FAF32001BD33E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MVVM-Login-SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = K6X56F623L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MVVM-Login-SwiftUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachindaingade.MVVM-Login-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4AA37F95276FAF32001BD33E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"MVVM-Login-SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = K6X56F623L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "MVVM-Login-SwiftUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachindaingade.MVVM-Login-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4AA37F97276FAF32001BD33E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6X56F623L;
+				INFOPLIST_FILE = "MVVM-Login-SwiftUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachindaingade.MVVM-Login-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM-Login-SwiftUI.app/MVVM-Login-SwiftUI";
+			};
+			name = Debug;
+		};
+		4AA37F98276FAF32001BD33E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6X56F623L;
+				INFOPLIST_FILE = "MVVM-Login-SwiftUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachindaingade.MVVM-Login-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM-Login-SwiftUI.app/MVVM-Login-SwiftUI";
+			};
+			name = Release;
+		};
+		4AA37F9A276FAF32001BD33E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6X56F623L;
+				INFOPLIST_FILE = "MVVM-Login-SwiftUIUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachindaingade.MVVM-Login-SwiftUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MVVM-Login-SwiftUI";
+			};
+			name = Debug;
+		};
+		4AA37F9B276FAF32001BD33E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6X56F623L;
+				INFOPLIST_FILE = "MVVM-Login-SwiftUIUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sachindaingade.MVVM-Login-SwiftUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MVVM-Login-SwiftUI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4AA37F69276FAF30001BD33E /* Build configuration list for PBXProject "MVVM-Login-SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AA37F91276FAF32001BD33E /* Debug */,
+				4AA37F92276FAF32001BD33E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AA37F93276FAF32001BD33E /* Build configuration list for PBXNativeTarget "MVVM-Login-SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AA37F94276FAF32001BD33E /* Debug */,
+				4AA37F95276FAF32001BD33E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AA37F96276FAF32001BD33E /* Build configuration list for PBXNativeTarget "MVVM-Login-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AA37F97276FAF32001BD33E /* Debug */,
+				4AA37F98276FAF32001BD33E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AA37F99276FAF32001BD33E /* Build configuration list for PBXNativeTarget "MVVM-Login-SwiftUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AA37F9A276FAF32001BD33E /* Debug */,
+				4AA37F9B276FAF32001BD33E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4AA37F66276FAF30001BD33E /* Project object */;
+}
