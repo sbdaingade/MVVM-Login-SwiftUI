@@ -11,7 +11,7 @@ struct LoginView: View {
     
     @StateObject var loginViewModel = LoginViewModel()
     @EnvironmentObject var authentication: Authentication
-
+    
     var body: some View {
         NavigationView {
             VStack (alignment: .leading, spacing: 16) {
@@ -31,14 +31,17 @@ struct LoginView: View {
                 }.frame(height:200)
                 
                 Button("Log in") {
-                                        loginViewModel.login { success in
-                                            authentication.updateValidation(success: success)
-                                        }
-                }
+                    loginViewModel.login { success in
+                        authentication.updateValidation(success: success)
+                    }
+                }.padding()
                 Spacer()
             }
         }
         .navigationTitle("Login")
+        .onLoadingState(loginViewModel.$loadingState) {
+            ActivityIndicator()
+        }
     }
 }
 
