@@ -8,10 +8,12 @@
 import Foundation
 
 class Authentication: ObservableObject {
+ 
     @Published var isValidated = false
     
     enum AuthenticationError: Error, LocalizedError, Identifiable {
         case invalidCredentials
+        case customError(String)
         
         var id: String {
             self.localizedDescription
@@ -20,14 +22,16 @@ class Authentication: ObservableObject {
         var errorDescription: String? {
             switch self {
             case .invalidCredentials:
-                return NSLocalizedString("Either your email or password are incorrect. Please try again", comment: "")
+                return "Either your email or password are incorrect. Please try again"
+            case .customError(let error):
+                return "\(error)"
             }
         }
     }
     
     func updateValidation(success: Bool) {
-     //   withAnimation {
-            isValidated = success
-      //  }
+        //   withAnimation {
+        isValidated = success
+        //  }
     }
 }

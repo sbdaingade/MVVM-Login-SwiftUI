@@ -14,7 +14,7 @@ struct LoginView: View {
     
     var body: some View {
         NavigationView {
-            VStack (alignment: .leading, spacing: 16) {
+            VStack (alignment: .center, spacing: 16) {
                 Form {
                     Section(header: Text("Email")){
                         TextField("Email", text: $loginViewModel.credentials.email)
@@ -30,17 +30,23 @@ struct LoginView: View {
                     }
                 }.frame(height:200)
                 
-                Button("Log in") {
-                    loginViewModel.login { success in
-                        authentication.updateValidation(success: success)
-                    }
-                }.padding()
+                Button(" Log in ") {
+                    loginViewModel.input.send(.login({ isSuccess in
+                        authentication.updateValidation(success: isSuccess)
+                    }))
+                }.cornerRadius(10)
+                .disabled(loginViewModel.loginDisable )
+                .foregroundColor(loginViewModel.loginDisable ? .gray : .blue)
                 Spacer()
             }
-        }
-        .navigationTitle("Login")
-        .onLoadingState(loginViewModel.$loadingState) {
-            ActivityIndicator()
+            .onLoadingState(loginViewModel.$loadingState) {
+                ActivityIndicator()
+            }
+            .background(Color.init(.sRGBLinear, red: 242/255, green: 242/255, blue: 247/255, opacity: 1.0))
+            .navigationTitle("Login")
+            .onAppear {
+                loginViewModel.input.send(.getCredetials)
+            }
         }
     }
 }

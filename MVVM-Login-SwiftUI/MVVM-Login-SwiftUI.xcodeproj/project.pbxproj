@@ -22,6 +22,10 @@
 		4AA37FA7276FB079001BD33E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA37FA6276FB079001BD33E /* LoginViewModel.swift */; };
 		4AA37FB1276FB11D001BD33E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA37FB0276FB11D001BD33E /* Credentials.swift */; };
 		4AA37FB6276FB15D001BD33E /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA37FB5276FB15D001BD33E /* UIApplicationExtension.swift */; };
+		4ADD20B527948AB70007AA83 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD20B427948AB70007AA83 /* Extensions.swift */; };
+		4ADD20BA279497DE0007AA83 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD20B9279497DE0007AA83 /* User.swift */; };
+		4ADD20BF2794A9190007AA83 /* SKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADD20BE2794A9190007AA83 /* SKeychain.swift */; };
+		4ADD20C52794A92C0007AA83 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADD20C42794A92C0007AA83 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		4AA37FA6276FB079001BD33E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4AA37FB0276FB11D001BD33E /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		4AA37FB5276FB15D001BD33E /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		4ADD20B427948AB70007AA83 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4ADD20B9279497DE0007AA83 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4ADD20BE2794A9190007AA83 /* SKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKeychain.swift; sourceTree = "<group>"; };
+		4ADD20C42794A92C0007AA83 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ADD20C52794A92C0007AA83 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +114,7 @@
 				4AA37F82276FAF32001BD33E /* MVVM-Login-SwiftUITests */,
 				4AA37F8D276FAF32001BD33E /* MVVM-Login-SwiftUIUITests */,
 				4AA37F6F276FAF30001BD33E /* Products */,
+				4ADD20C32794A92B0007AA83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +193,8 @@
 			children = (
 				4AA37FB0276FB11D001BD33E /* Credentials.swift */,
 				4A3DD7EB276FBE1F00F2246F /* Authentication.swift */,
+				4ADD20B9279497DE0007AA83 /* User.swift */,
+				4ADD20BE2794A9190007AA83 /* SKeychain.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +204,7 @@
 			children = (
 				4AA37FB5276FB15D001BD33E /* UIApplicationExtension.swift */,
 				4A9FD2A6278FEF450006A2A7 /* ViewModifiers.swift */,
+				4ADD20B427948AB70007AA83 /* Extensions.swift */,
 			);
 			path = Extesions;
 			sourceTree = "<group>";
@@ -203,6 +216,14 @@
 				4A9FD2B427900E3D0006A2A7 /* LoadingState.swift */,
 			);
 			path = APIServices;
+			sourceTree = "<group>";
+		};
+		4ADD20C32794A92B0007AA83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4ADD20C42794A92C0007AA83 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ADD20BA279497DE0007AA83 /* User.swift in Sources */,
+				4ADD20BF2794A9190007AA83 /* SKeychain.swift in Sources */,
 				4A3DD7EC276FBE1F00F2246F /* Authentication.swift in Sources */,
 				4AA37FB6276FB15D001BD33E /* UIApplicationExtension.swift in Sources */,
 				4AA37FA7276FB079001BD33E /* LoginViewModel.swift in Sources */,
@@ -341,6 +364,7 @@
 				4AA37FA0276FAFF9001BD33E /* LoginView.swift in Sources */,
 				4AA37FB1276FB11D001BD33E /* Credentials.swift in Sources */,
 				4A9FD2AD27900BF40006A2A7 /* ActivityIndicator.swift in Sources */,
+				4ADD20B527948AB70007AA83 /* Extensions.swift in Sources */,
 				4AA37F74276FAF30001BD33E /* ContentView.swift in Sources */,
 				4A3DD7F2276FBF8B00F2246F /* NetworkServices.swift in Sources */,
 				4AA37F72276FAF30001BD33E /* MVVM_Login_SwiftUIApp.swift in Sources */,
