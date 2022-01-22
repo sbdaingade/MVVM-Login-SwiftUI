@@ -9,10 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var authentication: Authentication
-
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            Text("Hello, world!")
+                .padding()
+        }
+        .navigationTitle("Home")
     }
 }
 

@@ -31,9 +31,9 @@ struct LoginView: View {
                 }.frame(height:200)
                 
                 Button(" Log in ") {
-                    loginViewModel.input.send(.login({ isSuccess in
+                    loginViewModel.input = .login({ isSuccess in
                         authentication.updateValidation(success: isSuccess)
-                    }))
+                    })
                 }.cornerRadius(10)
                 .disabled(loginViewModel.loginDisable )
                 .foregroundColor(loginViewModel.loginDisable ? .gray : .blue)
@@ -45,7 +45,7 @@ struct LoginView: View {
             .background(Color.init(.sRGBLinear, red: 242/255, green: 242/255, blue: 247/255, opacity: 1.0))
             .navigationTitle("Login")
             .onAppear {
-                loginViewModel.input.send(.getCredetials)
+                loginViewModel.input = .getCredetials
             }
         }
     }

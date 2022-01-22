@@ -27,10 +27,11 @@ class LoginViewModel: ObservableObject {
         case getCredetials
     }
     
-    private(set) public var input = PassthroughSubject<Input, Never>()
+    @Published public var input: Input?
     
     init() {
-        input.sink{ [unowned self] action in
+        
+        $input.compactMap{$0}.sink{ [unowned self] action in
             switch action {
             case .login(let complition):
                 self.login { success in
