@@ -19,7 +19,7 @@ class Authentication: ObservableObject {
             self.localizedDescription
         }
         
-        var errorDescription: String? {
+        var errorDescription: String {
             switch self {
             case .invalidCredentials:
                 return "Either your email or password are incorrect. Please try again"

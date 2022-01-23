@@ -8,6 +8,7 @@
 import Foundation
 class NetworkServices {
     static let shared = NetworkServices()
+    private init(){}
     
     func login(credentials: Credentials,completion: @escaping (Result<Bool,Authentication.AuthenticationError>) -> Void) {
         
