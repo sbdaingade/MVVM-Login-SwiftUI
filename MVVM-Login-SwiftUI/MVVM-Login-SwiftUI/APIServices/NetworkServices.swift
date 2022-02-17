@@ -36,13 +36,34 @@ class NetworkServices {
                 }
                 
             } catch {
-                completion(.failure(error as! Authentication.AuthenticationError))
+                completion(.failure(Authentication.AuthenticationError.customError("\(error.localizedDescription)")))
+            }
+            
+        }.resume()
+    }
+    
+    
+    func getPhotos(completion: @escaping (Result<[Photos],Authentication.AuthenticationError>) -> Void) {
+        
+        var request = URLRequest(url: URL(string: "https://jsonplaceholder.typicode.com/photos")!,timeoutInterval: Double.infinity)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "GET"
+        URLSession.shared.dataTask(with: request) { data,response,error in
+            
+            if error != nil {
+                completion(.failure(Authentication.AuthenticationError.customError(error!.localizedDescription)))
+                return
+            }
+            do {
+                
+                let photos = try JSONDecoder().decode([Photos].self, from: data!)
+                completion(.success(photos))
+                
+            } catch {
+                completion(.failure(Authentication.AuthenticationError.customError("\(error.localizedDescription)")))
             }
             
         }.resume()
     }
 }
 
-/*
- User
- */

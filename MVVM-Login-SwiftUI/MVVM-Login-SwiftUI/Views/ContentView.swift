@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var authentication: Authentication
+    @StateObject var photosViewModel = PhotosViewModel()
     
     var body: some View {
-        NavigationView {
-            Text("Hello, world!")
-                .padding()
+        
+        ScrollView {
+            LazyVStack(alignment: .leading) {
+                ForEach(photosViewModel.photos) { photo in
+                    let viewModel = PhotoViewModel(withPhoto: photo)
+                    PhotoViewCell(photoViewModel: viewModel)
+                }
+            }
+            .padding([.leading,.trailing,.top,.bottom] ,5)
+            .background(Color.gray)
         }
+        .onAppear(perform: {
+            photosViewModel.input = .getPhotos
+        })
         .navigationTitle("Home")
+        .onLoadingState(photosViewModel.$loadingState, blurContent: true) { ActivityIndicator()
+        }
     }
 }
 

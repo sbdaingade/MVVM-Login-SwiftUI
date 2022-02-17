@@ -14,7 +14,6 @@ class LoginViewModel: ObservableObject {
     @Published var credentials = Credentials()
     @Published var showProgressView = false
     private var cancallables = Set<AnyCancellable>()
-    
     private let keychain = SKeychain()
     private let server = "www.google.com"
     @Published public private(set) var userCredentials: SKeychain.SKCredentials?
@@ -37,7 +36,7 @@ class LoginViewModel: ObservableObject {
                 self.login { success in
                     complition(success)
                 }
-            case .forgotPassword(let email):
+            case .forgotPassword(_):
                 break
             case .getCredetials:
                 userCredentials = nil
@@ -78,11 +77,11 @@ class LoginViewModel: ObservableObject {
                     loadingState = .idle
                     completion(true)
                 }
-            case .failure(let authError):
+            case .failure(let error as Authentication.AuthenticationError?):
                 DispatchQueue.main.async {
                     //   credentials = Credentials()
                     completion(false)
-                    loadingState = .failed(authError.errorDescription ?? "Invalid credentials" )
+                    loadingState = .failed(error?.errorDescription ?? "Invalid credentials" )
                 }
             }
         }
