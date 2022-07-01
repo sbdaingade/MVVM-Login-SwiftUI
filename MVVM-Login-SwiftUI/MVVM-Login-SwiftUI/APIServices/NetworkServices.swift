@@ -6,11 +6,23 @@
 //
 
 import Foundation
-class NetworkServices {
-    static let shared = NetworkServices()
-    private init(){}
+protocol LoginNetworkService
+{
+   static func login(credentials: Credentials,completion: @escaping (Result<Bool,Authentication.AuthenticationError>) -> Void)
+}
+
+protocol PhotoNetworkService {
+    static func getPhotos(completion: @escaping (Result<[Photos],Authentication.AuthenticationError>) -> Void)
+}
+
+public struct NetworkServices: LoginNetworkService {
     
-    func login(credentials: Credentials,completion: @escaping (Result<Bool,Authentication.AuthenticationError>) -> Void) {
+    static func login(credentials: Credentials,completion: @escaping (Result<Bool,Authentication.AuthenticationError>) -> Void) {
+        
+        let defaultConfiguration = URLSessionConfiguration.default
+        defaultConfiguration.waitsForConnectivity = true
+        defaultConfiguration.timeoutIntervalForRequest = 300
+        let sharedSession = URLSession(configuration: defaultConfiguration)
         
         let parameters = ["email":credentials.email,"password":credentials.password]
         
@@ -21,7 +33,8 @@ class NetworkServices {
             request.httpBody = postData
         }
         request.httpMethod = "POST"
-        URLSession.shared.dataTask(with: request) { data,response,error in
+        
+        sharedSession.dataTask(with: request) { data,response,error in
             
             if error != nil {
                 completion(.failure(Authentication.AuthenticationError.customError(error!.localizedDescription)))
@@ -42,13 +55,20 @@ class NetworkServices {
         }.resume()
     }
     
-    
-    func getPhotos(completion: @escaping (Result<[Photos],Authentication.AuthenticationError>) -> Void) {
+}
+
+public struct PhotoNetworkServices: PhotoNetworkService {
+   static func getPhotos(completion: @escaping (Result<[Photos],Authentication.AuthenticationError>) -> Void) {
         
         var request = URLRequest(url: URL(string: "https://jsonplaceholder.typicode.com/photos")!,timeoutInterval: Double.infinity)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
-        URLSession.shared.dataTask(with: request) { data,response,error in
+        let defaultConfiguration = URLSessionConfiguration.default
+        defaultConfiguration.waitsForConnectivity = true
+        defaultConfiguration.timeoutIntervalForRequest = 300
+        let sharedSession = URLSession(configuration: defaultConfiguration)
+        
+        sharedSession.dataTask(with: request) { data,response,error in
             
             if error != nil {
                 completion(.failure(Authentication.AuthenticationError.customError(error!.localizedDescription)))

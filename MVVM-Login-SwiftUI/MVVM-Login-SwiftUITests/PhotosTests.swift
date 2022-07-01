@@ -25,7 +25,7 @@ class PhotosTests: XCTestCase {
 
     func testPhotos() {
         let expec = expectation(description: "User photos request")
-        NetworkServices.shared.getPhotos { result in
+        PhotoNetworkServices.getPhotos { result in
             switch result {
             case .failure(let error):
                 XCTFail(" user photos failed \(error.localizedDescription)")

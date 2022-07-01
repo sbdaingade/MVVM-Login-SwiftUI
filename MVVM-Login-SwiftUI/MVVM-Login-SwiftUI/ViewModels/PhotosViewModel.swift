@@ -33,18 +33,18 @@ class PhotosViewModel: ObservableObject {
     private func getAllphotos() {
         showProgressView = true
         loadingState = .loading
-        NetworkServices.shared.getPhotos() { [unowned self] (result:Result<[Photos], Authentication.AuthenticationError>) in
+        PhotoNetworkServices.getPhotos() { [unowned self] (result:Result<[Photos], Authentication.AuthenticationError>) in
             //   showProgressView = false
             switch result {
             case .success(let allPhotos):
-                DispatchQueue.main.async {
-                    photos.removeAll()
-                    photos = allPhotos
-                    loadingState = .idle
+                DispatchQueue.main.async { [unowned self] in
+                    self.photos.removeAll()
+                    self.photos = allPhotos
+                    self.loadingState = .idle
                 }
             case .failure(let error as Authentication.AuthenticationError?):
-                DispatchQueue.main.async {
-                    loadingState = .failed(error?.errorDescription ?? "Invalid request" )
+                DispatchQueue.main.async {  [unowned self] in
+                    self.loadingState = .failed(error?.errorDescription ?? "Invalid request" )
                 }
             }
         }

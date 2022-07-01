@@ -18,15 +18,11 @@ class LoginTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
     
     func testLogin() {
         let expec = expectation(description: "User login request")
         let credentials = Credentials(email: "johnios9952@gmail.com", password: "123456")
-        NetworkServices.shared.login(credentials: credentials) { result in
+        NetworkServices.login(credentials: credentials) { result in
             switch result {
             case .failure(let error):
                 XCTFail(" user login failed \(error.localizedDescription)")
@@ -47,7 +43,7 @@ class LoginTests: XCTestCase {
     func testLoginFail() {
         let expec = expectation(description: "User login request")
         let credentials = Credentials(email: "johnios9952@gmail.com", password: "1234567")
-        NetworkServices.shared.login(credentials: credentials) { result in
+        NetworkServices.login(credentials: credentials) { result in
             switch result {
             case .failure(let error):
                 XCTFail(" user login failed \( error.errorDescription)")

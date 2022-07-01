@@ -17,7 +17,6 @@ class LoginViewModel: ObservableObject {
     private let keychain = SKeychain()
     private let server = "www.google.com"
     @Published public private(set) var userCredentials: SKeychain.SKCredentials?
-    
     @Published public private(set) var loadingState: LoadingState = LoadingState.idle
     
     public enum Input {
@@ -62,26 +61,25 @@ class LoginViewModel: ObservableObject {
     func login(completion: @escaping (Bool) -> Void) {
         showProgressView = true
         loadingState = .loading
-        NetworkServices.shared.login(credentials: credentials) { [unowned self](result:Result<Bool, Authentication.AuthenticationError>) in
+        NetworkServices.login(credentials: credentials) { [unowned self](result:Result<Bool, Authentication.AuthenticationError>) in
             //   showProgressView = false
             switch result {
             case .success:
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [unowned self] in
                     do {
                         let creditials = SKeychain.SKCredentials(email: credentials.email, password: credentials.password)
                         try keychain.addCredentials(creditials, server: self.server)
                     } catch  {
                         print(error.localizedDescription)
                     }
-                    
                     loadingState = .idle
                     completion(true)
                 }
             case .failure(let error as Authentication.AuthenticationError?):
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [unowned self] in
                     //   credentials = Credentials()
                     completion(false)
-                    loadingState = .failed(error?.errorDescription ?? "Invalid credentials" )
+                    self.loadingState = .failed(error?.errorDescription ?? "Invalid credentials" )
                 }
             }
         }

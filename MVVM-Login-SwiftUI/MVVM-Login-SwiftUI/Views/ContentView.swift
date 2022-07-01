@@ -12,15 +12,19 @@ struct ContentView: View {
     
     var body: some View {
         
-        ScrollView {
-            LazyVStack(alignment: .leading) {
-                ForEach(photosViewModel.photos) { photo in
-                    let viewModel = PhotoViewModel(withPhoto: photo)
-                    PhotoViewCell(photoViewModel: viewModel)
-                }
-            }
-            .padding([.leading,.trailing,.top,.bottom] ,5)
-            .background(Color.gray)
+//        ScrollView {
+//            LazyVStack(alignment: .leading) {
+//                ForEach(photosViewModel.photos) { photo in
+//                    let viewModel = PhotoViewModel(withPhoto: photo)
+//                    PhotoViewCell(photoViewModel: viewModel)
+//                }
+//            }
+//            .padding([.leading,.trailing,.top,.bottom] ,5)
+//            .background(Color.gray)
+//        }
+        List(photosViewModel.photos) { photo in
+                let viewModel = PhotoViewModel(withPhoto: photo)
+                PhotoViewCell(photoViewModel: viewModel)
         }
         .onAppear(perform: {
             photosViewModel.input = .getPhotos

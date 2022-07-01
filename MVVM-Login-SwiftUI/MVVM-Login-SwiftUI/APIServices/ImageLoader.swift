@@ -9,19 +9,25 @@ import Foundation
 import Combine
 
 class ImageLoader: ObservableObject {
+
     var didChange = PassthroughSubject<Data, Never>()
-    var data = Data() {
+    var newData = Data() {
         didSet {
-            didChange.send(data)
+            didChange.send(newData)
         }
     }
 
     init(urlString:String) {
         guard let url = URL(string: urlString) else { return }
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        let config = URLSessionConfiguration.default
+        config.waitsForConnectivity = true
+        config.timeoutIntervalForRequest = 300
+        let sessionShared = URLSession(configuration: config)
+        
+        let task = sessionShared.dataTask(with: url) { data, response, error in
             guard let data = data else { return }
             DispatchQueue.main.async {
-                self.data = data
+                self.newData = data
             }
         }
         task.resume()
